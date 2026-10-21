@@ -8,9 +8,6 @@ import argparse
 def parse_args():
     p = argparse.ArgumentParser(description="DNS poisoning PoC, MITM required - educational lab use only")
     p.add_argument("--victim-ip", required=True, help="IP of the target host")
-    #p.add_argument("--victim-mac", required=True, help="MAC of the target host")
-    p.add_argument("--router-ip", required=True, help="Gateway IP")
-    p.add_argument("--router-mac", required=True, help="Gateway MAC")
     p.add_argument("--iface", required=True, help="Network interface number (e.g. 15)")
     p.add_argument("--conf-domain", required=True, help="Domain of the target host")
     p.add_argument("--dns-ip", required=True,nargs="+", help="legit DNS servers IP addresses")
